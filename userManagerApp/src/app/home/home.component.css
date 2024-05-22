@@ -1,0 +1,51 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 65px;
+    color: white;
+}
+
+.section {
+    height: 400px;
+    width: 50%;
+    text-align: center;
+    display: grid;
+    place-content: center;
+    padding: 0 120px 0 120px;
+}
+
+.vertical {
+    border-right: 1px solid white;
+}
+
+.heading {
+    font-size: 18px;
+}
+
+.content {
+    font-size: 13px;
+}
+
+mat-icon {
+    font-size: 75px;
+    height: 75px;
+    width: 75px;
+}
+.btn {
+    background-color: #3a9fd273;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    border: 1px solid rgba(255, 255, 255, 0.598);
+}
+
+.user-icon {
+    margin-top: -32px;
+}

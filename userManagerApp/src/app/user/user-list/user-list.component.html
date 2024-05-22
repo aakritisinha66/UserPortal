@@ -1,0 +1,57 @@
+<div class="user-table">
+    <div class="add-div">
+        <button class="add-user" (click)="addNew()">Add User</button>
+    </div>
+    <div *ngIf="userData.length === 0" class="no-data">
+            <div>
+                <mat-icon class="search-icon">youtube_searched_for</mat-icon>
+            </div>
+            <p class="title">No data to display</p>
+            <p class="sub-title">Click on "Add User" button to create a user</p>
+    </div>
+
+    <div *ngIf="userData.length > 0">
+        <table mat-table [dataSource]="userData.slice(currentPage*pageSize, (currentPage + 1)*pageSize)">
+
+            <ng-container matColumnDef="index">
+                <th mat-header-cell *matHeaderCellDef> S. No. </th>
+                <td mat-cell *matCellDef="let row; let i = index"> {{ currentPage * pageSize + i + 1 }} </td>
+              </ng-container>
+
+            <ng-container matColumnDef="username">
+                <th mat-header-cell *matHeaderCellDef (click)="sorting('username')"> Username </th>
+                <td mat-cell *matCellDef="let row"> {{row.username}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="phone">
+                <th mat-header-cell *matHeaderCellDef (click)="sorting('phone')"> Phone Number </th>
+                <td mat-cell *matCellDef="let row"> {{row.phone}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="email">
+                <th mat-header-cell *matHeaderCellDef (click)="sorting('email')"> Email </th>
+                <td mat-cell *matCellDef="let row"> {{row.email}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef> Actions </th>
+                <td mat-cell *matCellDef="let user; let i = index">
+                    <div class="actions">
+                        <button mat-button (click)="editUser(currentPage * pageSize + i)"
+                            style="background-color: #0080005c;"><mat-icon>edit</mat-icon></button>
+                        <button mat-button (click)="deleteUser(currentPage * pageSize + i)"
+                            style="background-color: #ff00002b;"><mat-icon>delete</mat-icon></button>
+                    </div>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <mat-paginator [length]="userData.length" [pageSize]="pageSize" [pageSizeOptions]="[5, 10, 20]"
+            (page)="pagination($event)">
+        </mat-paginator>
+    </div>>
+
+
+</div>

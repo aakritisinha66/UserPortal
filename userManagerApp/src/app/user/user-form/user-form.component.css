@@ -1,0 +1,60 @@
+.form-section {
+    display: flex;
+    justify-content: center;
+    height: 85%;
+    align-items: center;
+}
+
+.fields {
+    width: 400px;
+}
+
+.field {
+    color: whitesmoke;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+br {
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    height: 2rem;
+    height: 2rem;
+    border: none;
+    /* border-radius: 5px; */
+    background-color: #ffffff14;
+    border-bottom: 2px solid white;
+    color: whitesmoke;
+}
+
+label {
+    margin: 10px 0px 10px 0px;
+}
+
+.btn {
+    text-align: center;
+}
+.required {
+    color: red;
+}
+button {
+    background-color: #1b6600;;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+}
+.error {
+    color: red;
+  font-size: 12px;
+}
+
+button:disabled {
+    background-color: rgb(131, 131, 131);
+    cursor: not-allowed;
+}

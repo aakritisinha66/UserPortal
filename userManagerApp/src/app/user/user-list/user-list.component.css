@@ -1,0 +1,120 @@
+.add-div {
+    display: flex;
+    justify-content: end;
+    margin-right: 50px;
+    margin-bottom: 20px;
+}
+
+.add-user {
+    padding: 8px;
+    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.598);
+}
+
+.add-div button:hover {
+    border: 1px solid white;
+}
+
+table td {
+    color: white !important;
+    border-bottom: 1px solid white;
+    text-align: center;
+}
+
+table th {
+    color: black !important;
+    border-bottom: 1px solid white;
+    background-color: #ffffff80;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+}
+
+.user-table {
+    display: block;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+table {
+    /* background-color: #ffffff30; */
+    background-color: transparent;
+    color: white !important;
+}
+
+button {
+    background-color: #3a9fd273;
+    border: none;
+    color: white;
+    /* border: 1px solid rgba(255, 255, 255, 0.598); */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    /* border: 1px solid white; */
+    border: 1px solid rgba(255, 255, 255, 0.598);
+}
+
+.actions {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+mat-paginator {
+    background-color: #ffffff30;
+    color: white;
+    /* position: fixed;
+    width: 97%;
+    bottom: 70px; */
+}
+
+.no-data {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.19);
+    text-align: center;
+    height: 300px;
+    place-content: center;
+    display: grid;
+
+}
+
+search-icon {
+    font-size: 100px;
+    width: 100px;
+    height: 100px;
+}
+
+.title {
+    font-size: 25px;
+}
+
+.sub-title {
+    color: rgba(255, 255, 255, 0.83);
+}
+
+:host ::ng-deep .mat-mdc-select-arrow {
+    color: white;
+}
+
+:host ::ng-deep .mat-mdc-select-value {
+    color: white;
+}
+
+:host ::ng-deep .mdc-text-field {
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+:host ::ng-deep .mdc-icon-button {
+    background-color: #ffffffc4;
+}
+:host ::ng-deep .mat-mdc-icon-button[disabled] {
+    background-color: #ffffff42;
+    cursor: not-allowed !important;
+}
+
+:host ::ng-deep .mat-mdc-icon-button[disabled] .mat-mdc-paginator-icon {
+    fill: #000000cf;
+  }

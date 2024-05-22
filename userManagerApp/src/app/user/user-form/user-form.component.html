@@ -1,0 +1,48 @@
+<div class="form-section">
+    <form [formGroup]="userForm" (ngSubmit)="submit()">
+        <div class="fields">
+            <div class="field">
+                <label>Username <span class="required">*</span></label><br>
+                <input matInput formControlName="username" type="text">
+                <div
+                    *ngIf="userForm.controls['username'].invalid && (userForm.controls['username'].dirty || userForm.controls['username'].touched)">
+                    <div *ngIf="userForm.controls['username'].errors?.['required']" class="error">
+                        Username is required
+                    </div>
+                    <div *ngIf="userForm.controls['username'].errors?.['minlength']" class="error">
+                        Username should be atleast 3 characters.
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <label>Phone Number <span class="required">*</span></label><br>
+                <input matInput type="tel" formControlName="phone">
+                <div
+                    *ngIf="userForm.controls['phone'].invalid && (userForm.controls['phone'].dirty || userForm.controls['phone'].touched)">
+                    <div *ngIf="userForm.controls['phone'].errors?.['required']" class="error">
+                        Phone number is required
+                    </div>
+                    <div *ngIf="userForm.controls['phone'].errors?.['pattern']" class="error">
+                        Phone number should be exactly 10 digits.
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <label>Email <span class="required">*</span></label><br>
+                <input matInput type="email" formControlName="email">
+                <div
+                    *ngIf="userForm.controls['email'].invalid && (userForm.controls['email'].dirty || userForm.controls['email'].touched)">
+                    <div *ngIf="userForm.controls['email'].errors?.['required']" class="error">
+                        Email is required
+                    </div>
+                    <div *ngIf="userForm.controls['email'].errors?.['email']" class="error">
+                        Email is not valid.
+                    </div>
+                </div>
+            </div>
+            <div class="btn">
+                <button mat-button [disabled]="userForm.invalid" type="submit">Save</button>
+            </div>
+        </div>
+    </form>
+</div>

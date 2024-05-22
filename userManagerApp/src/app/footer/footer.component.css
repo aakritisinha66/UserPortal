@@ -1,0 +1,19 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(0, 25, 33);
+    color: white;
+    height: 3rem;
+    padding-left: 60px;
+    padding-right: 80px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.links {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+}
